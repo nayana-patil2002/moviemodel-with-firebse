@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+   background-image: url(../image/moviemodel.jpg);
+   height: 100vh;
+   background-size: cover;
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   background-position: center;
+}
+
+.logo img{
+    width: 100%;
+}
+ 
+
+a.logo{
+    display: inline-block;
+    width:120px;
+}
+
+
+.backdrop{
+   position: fixed;
+   height: 100vh;
+   width: 100%;
+   background-color: rgba(0, 0, 0, 0.6);
+   left:0;
+   top:0;
+   display: none;
+}
+ 
+.backdrop.active{
+    display: block;
+}
+
+
+.movieModel{
+   width:60%;
+   position:fixed;
+   top:25%;
+   left:20%;
+   background-color: rgba(0, 0, 0, 0.7);
+   display: none;
+}
+
+.movieModel.active{
+    display: block;
+}
+
+.movieModel .card{
+    background-color: transparent;
+    color: white;
+}
+  
+
+.movieModel .card .form-control{
+    background-color: transparent;
+    border-color: gray;
+    color: white;
+} 
+
+
+.movieModel .card select option{
+    background-color: gray;
+}
+
+/* movieCard ka css */
+
+figure.movieCard{
+  height: 450px;
+  overflow: hidden;
+  color: white;
+  position: relative;
+  border-radius: 5px;
+  border-color: gray;
+}
+
+figure.movieCard img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ratingInfo{
+    position: absolute;
+    left:0;
+    right: 0;
+    bottom: 0;
+    background-color:rgba(0, 0, 0, 0.7) ;
+    padding: 10px;
+}
+
+.movieinfo{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+     left:0;
+     top:0;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    overflow: auto;
+    display: none;
+}
+
+.action{
+    position: absolute;
+    display: flex;
+    left:0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    padding: 10px;
+    justify-content: space-between;
+    display: none;
+}
+
+
+.movieCard:hover .movieinfo{
+    display: block;
+}
+
+
+.movieCard:hover .action{
+    display: flex;
+}
+
+
+.loader{
+    height: 100vh;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(225, 225, 225, 0.6);
+    display: flex;
+    top:0;
+    left:0;
+    position: fixed;
+    color: blue;
+}

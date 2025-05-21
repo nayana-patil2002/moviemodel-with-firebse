@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+   <link rel="stylesheet" href="./assets/css/style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+
+</head>
+<body>
+  
+   <div class="container my-5">
+     <div class="row">
+        <div class="col-md-6">
+           <a href="index.html" class="logo">
+             <img src="./assets/image/logo.svg">
+           </a>
+        </div>
+        <div class="col-md-6 text-right">
+            <button class="btn btn-danger" id="showformBtn">Add button</button>
+        </div>
+     </div>
+   </div>
+
+
+     <div class="container-fluid">
+      <div class="row" id="movieConatiner">
+           <div class="col-md-3">
+              <figure class="movieCard">
+                <img src="https://s.yimg.com/fz/api/res/1.2/5C_7BjFQnrYSlatFYp5OAA--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpdDtoPTI2MDtxPTgwO3c9MTk0/https://s.yimg.com/zb/imgv1/12953f41-27cb-3784-9fdc-425f340d18af/t_500x300" alt="chhava" logo="chhava">
+
+                <figcaption>
+                     <div class="ratingInfo">
+                         <div class="row">
+                             <div class="col-10">
+                                <h5>Chhava</h5>
+                             </div>
+                             <div class="col-md-2">
+                                <small class="rating bg-success p-2">5</small>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="movieinfo">
+                        <h2>Chhava</h2>
+                        <p class="overView">Chhaava is a 2025 Hindi film based on the life of Sambhaji Maharaj, the second ruler of the Maratha Empire. It stars Vicky Kaushal, Rashmika Mandanna and Akshaye Khanna, and is directed by</p>
+                     </div>
+
+                     <div class="action">
+                        <button type="button" class="btn btn-outline-success">Edit</button>
+                      <button type="button" class="btn btn-outline-danger">Remove</button>
+                     </div>
+                </figcaption>
+              </figure>
+           </div>
+      </div>
+         
+     </div>
+
+
+   <div class="backdrop modelClose" id="backdrop"></div>
+   <div class="movieModel" id="movieModel">
+        <form id="movieForm">
+
+       <div class="card">
+           <div class="card-header d-flex justify-content-between">
+             <h3>Add movie Details</h3>
+             <i class="fa-solid fa-xmark modelClose"></i>
+           </div> 
+           
+           <div class="card-body">
+              <div class="form-group">
+                 <lable for="movieTitle">Movie Titel</lable>
+                 <input id="movieTitle" class="form-control" type="text" required>
+              </div>
+              <div class="form-group">
+                 <lable for="movieURL">Movie img URL</lable>
+                 <input id="movieURL" class="form-control" type="text" required>
+              </div>
+              <div class="form-group">
+                 <lable for="movieDescr">Movie Description</lable>
+                 <textarea id="movieDescr" class="form-control" required ></textarea>
+              </div>
+              <div class="form-group">
+                 <lable for="movieRating">Movie Rating</lable>
+                 <select class="form-control" id="movieRating">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      
+                 </select>
+              </div>
+
+           </div>
+
+           <div class="card-footer d-flex justify-content-between">
+                <div>
+                     <button type="submit" class="btn btn-success" id="movieAddBTN">Add movie</button>
+                  <button  type="button" class="btn btn-success d-none" id="movieupdateBTN">update movie</button>
+                </div>
+
+                <button  type="button" class="btn btn-danger modelClose">close</button>
+           </div>
+        </div>
+        </form>
+   </div>
+     
+    
+
+       
+   <div class="loader d-none" id="loader">
+     <div class="spinner-border" role="status">
+      <span class="sr-only">Loading...</span>
+   </div>
+     
+   </div>
+  
+    
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="./assets/js/app.js"></script>
+</body>
+</html>
